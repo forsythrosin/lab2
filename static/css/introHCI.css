@@ -15,9 +15,28 @@ body {
      padding: 20px;
 }
 
+h1, h2, h3, h4 {
+     font-family: 'Open Sans Condensed';
+}
+
+h4 {
+     background: rgba(197, 221, 178, 0.9);
+     padding: 15px 10px;
+     font-size: 24px;
+}
+
 .jumbotron {
 	position: relative;
 	background: none;
+}
+
+.jumbotron h1 {
+     font-size: 70px;
+     margin: 0;
+}
+
+.jumbotron p {
+     margin: 0;
 }
 
 .jumbotron:after {
@@ -30,4 +49,76 @@ body {
      right: 0;
      position: absolute;
      z-index: -1;	
+}
+
+.project {
+     max-width: 50%;
+     float: left;
+}
+
+a.thumbnail {
+     padding: 0;
+     position: relative;
+     color: rgba(12, 27, 0, 1);
+     margin: 10px;
+}
+
+a.thumbnail:hover {
+     background: #eee;
+     color: rgba(12, 27, 0, 1);
+     border-color: rgba(0,0,0,0.3);
+}
+
+     a.thumbnail p {
+          background: rgba(197, 221, 178, 0.8);
+          margin: 0;
+          padding: 10px;
+          border-radius: 0 0 4px 4px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+     }
+
+     a.thumbnail:hover p {
+          background: rgba(197, 221, 178, 0.9);
+     }
+
+     a.thumbnail img {
+          border-radius: 4px;
+     }
+
+a.thumbnail:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: rgba(255,255,255,0.0);
+     -webkit-transition: all .2s ease-in-out;
+     transition: all .2s ease-in-out;
+}
+
+a.thumbnail:hover:after {
+     background: rgba(255,255,255,0.2);
+}
+
+@media all and (max-width: 530px) {
+
+     .project {
+          max-width: 100%;
+     }
+
+}
+
+@media all and (min-width: 1200px) {
+
+     .project {
+          max-width: 33%;
+     }
+
 }
